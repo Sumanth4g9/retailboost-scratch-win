@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				brand: {
+					purple: "#8B5CF6",
+					orange: "#F97316",
+					light: "#F3F4F6"
 				}
 			},
 			borderRadius: {
@@ -84,11 +90,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'scratch': {
+					'0%': { 
+						clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+						opacity: '1'
+					},
+					'100%': { 
+						clipPath: 'polygon(0 0, 100% 0, 100% 0, 0 0)', 
+						opacity: '0.3'
+					}
+				},
+				'spin-wheel': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(var(--spin-degrees, 1800deg))' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'scratch-reveal': 'scratch 1s ease-out forwards',
+				'spin-wheel': 'spin-wheel 3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards'
 			}
 		}
 	},
