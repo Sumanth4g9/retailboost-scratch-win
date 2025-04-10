@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> eb0d4e5f89975ec42f95dc5099034f6324bf9e09
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 
@@ -31,12 +27,8 @@ const ExclusiveVouchers = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-<<<<<<< HEAD
         <h2 className="text-3xl font-bold text-gray-800 mb-12">Exclusive Vouchers </h2>
         <h3>vochers can be redemed using coins</h3>
-=======
-        <h2 className="text-3xl font-bold text-gray-800 mb-12">Exclusive Vouchers</h2>
->>>>>>> eb0d4e5f89975ec42f95dc5099034f6324bf9e09
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
           {voucherData.map((voucher) => (
@@ -64,8 +56,4 @@ const ExclusiveVouchers = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ExclusiveVouchers;
-=======
-export default ExclusiveVouchers;
->>>>>>> eb0d4e5f89975ec42f95dc5099034f6324bf9e09
