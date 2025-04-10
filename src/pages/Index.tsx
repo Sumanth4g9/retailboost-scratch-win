@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ExclusiveVouchers from '@/components/ExclusiveVouchers';
 
 const Index = () => {
   return (
@@ -71,6 +72,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+        
+        {/* Exclusive Vouchers Section */}
+        <ExclusiveVouchers />
         
         {/* Benefits Section */}
         <section className="py-16 bg-gray-50">
