@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ExclusiveVouchers from '@/components/ExclusiveVouchers';
-import { ArrowRight, Star } from 'lucide-react';
 
+import { Star } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -74,6 +74,7 @@ const Index = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
               {/* Use Cases Section */}
         <section className="py-20 bg-white">
 
@@ -104,6 +105,12 @@ const Index = () => {
         </div>
       </section>
       
+=======
+        
+        {/* Exclusive Vouchers Section */}
+        <ExclusiveVouchers />
+        
+>>>>>>> eb0d4e5f89975ec42f95dc5099034f6324bf9e09
         {/* Benefits Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
