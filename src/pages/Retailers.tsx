@@ -159,7 +159,7 @@ const Retailers = () => {
       </section>
       
       {/* Use Cases Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold">Use Cases</h2>
@@ -185,7 +185,7 @@ const Retailers = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* Pricing Section */}
       <section className="py-20 bg-gray-50">
@@ -195,17 +195,17 @@ const Retailers = () => {
             <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
               Simple, transparent pricing to help your business grow.
             </p>
-            <div className="mt-4 inline-block bg-gray-200 rounded-full px-2 py-1 text-sm">
+            {/* <div className="mt-4 inline-block bg-gray-200 rounded-full px-2 py-1 text-sm">
               Coming Soon
-            </div>
+            </div> */}
           </div>
           
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
-                name: "Free Trial", 
-                price: "₹0",
-                period: "30 days",
+                name: "Exclusive For Retailers", 
+                price: "₹199",
+                period: " 28 DAYS",
                 features: [
                   "Basic QR code generation",
                   "Up to 100 customer records",
@@ -215,8 +215,8 @@ const Retailers = () => {
               },
               { 
                 name: "Standard", 
-                price: "₹999",
-                period: "per month",
+                price: "₹499",
+                period: " 28 DAYS",
                 popular: true,
                 features: [
                   "Advanced QR codes",
@@ -228,8 +228,8 @@ const Retailers = () => {
               },
               { 
                 name: "Premium", 
-                price: "₹1,999",
-                period: "per month",
+                price: "₹1,499",
+                period: " 28 DAYS",
                 features: [
                   "Everything in Standard",
                   "White-labeled experience",
@@ -266,7 +266,7 @@ const Retailers = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button 
+                  {/* <Button 
                     className={`w-full ${
                       plan.popular 
                         ? 'bg-brand-purple hover:bg-brand-purple/90 text-white' 
@@ -274,7 +274,7 @@ const Retailers = () => {
                     }`}
                   >
                     Coming Soon
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             ))}

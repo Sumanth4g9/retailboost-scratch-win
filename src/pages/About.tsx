@@ -51,14 +51,14 @@ const About = () => {
         </div>
       </section>
       
-      {/* Founder Section */}
+      {/* Founder Section
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row-reverse items-center">
             <div className="md:w-1/2 md:pl-12">
               <h2 className="text-3xl font-bold mb-6">Our Founder</h2>
               <p className="text-lg text-gray-600 mb-6">
-                RetailBoost was created by K. Sumanth, who saw firsthand the challenges faced by local retailers in competing with quick commerce apps.
+                RetailBoost was created by , who saw firsthand the challenges faced by local retailers in competing with quick commerce apps.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Having grown up around small businesses, Sumanth understood that these retailers needed affordable digital solutions that could help them build customer loyalty without breaking the bank.
@@ -71,15 +71,15 @@ const About = () => {
               <div className="relative">
                 <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-brand-orange/20 rounded-full filter blur-3xl opacity-70"></div>
                 <img 
-                  src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=K.+Sumanth" 
-                  alt="K. Sumanth - Founder" 
+                  src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Founder" 
+                  alt=" - Founder" 
                   className="relative z-10 rounded-lg shadow-xl w-full" 
                 />
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       
       {/* Testimonials Section */}
       <section className="py-20 bg-white">

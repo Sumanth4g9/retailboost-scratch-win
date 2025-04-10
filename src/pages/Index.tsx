@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ExclusiveVouchers from '@/components/ExclusiveVouchers';
+import { ArrowRight, Star } from 'lucide-react';
+
 
 const Index = () => {
   return (
@@ -71,7 +74,36 @@ const Index = () => {
             </div>
           </div>
         </section>
-        
+              {/* Use Cases Section */}
+        <section className="py-20 bg-white">
+
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold"> OUR REACH  </h2>
+            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+              RetailBoost works for a variety of local businesses.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Grocery", title: "Grocery Shops" },
+              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Food", title: "Food Stalls" },
+              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Restaurant", title: "Restaurants" },
+              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Vegetable", title: "Vegetable Vendors" },
+              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Kirana", title: "Local Kirana Stores" }
+            ].map((useCase, index) => (
+              <div key={index} className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <img src={useCase.image} alt={useCase.title} className="w-full h-48 object-cover" />
+                <div className="p-4 bg-gray-50">
+                  <h3 className="text-lg font-semibold text-center">{useCase.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
         {/* Benefits Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -93,7 +125,7 @@ const Index = () => {
                   ))}
                 </ul>
               </div>
-              <div>
+              {/* <div>
                 <h2 className="text-3xl font-bold mb-8">Benefits to Businesses</h2>
                 <ul className="space-y-4">
                   {[
@@ -109,13 +141,14 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
-        
+        {/* exclusive vouchers */}
+        <ExclusiveVouchers />
         {/* CTA Section */}
-        <section className="py-16">
+        {/* <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Boost Your Business?</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
@@ -134,7 +167,57 @@ const Index = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
+        <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold">What Retailers Say</h2>
+            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+              Hear from some of the businesses using RetailBoost to drive customer loyalty.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { 
+                quote: "RetailBoost has helped us increase repeat customers by 30% in just three months. Our customers love the scratch card experience!",
+                name: "Raj Kumar",
+                business: "Fresh Grocery Mart",
+                rating: 5
+              },
+              { 
+                quote: "The system was easy to set up and our customers find it exciting. We're seeing more repeat visits and higher average spend.",
+                name: "Priya Sharma",
+                business: "Spice & Nice Restaurant",
+                rating: 5
+              },
+              { 
+                quote: "Our customers are actually choosing us over the quick commerce apps because they enjoy the shopping experience and rewards.",
+                name: "Vikram Singh",
+                business: "Singh's Kirana Store",
+                rating: 4
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-brand-orange fill-brand-orange" />
+                  ))}
+                  {[...Array(5 - testimonial.rating)].map((_, i) => (
+                    <Star key={i + testimonial.rating} className="h-5 w-5 text-gray-300" />
+                  ))}
+                </div>
+                <p className="text-gray-600 italic mb-6">"{testimonial.quote}"</p>
+                <div>
+                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="text-sm text-gray-500">{testimonial.business}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
       </main>
       
       <Footer />
