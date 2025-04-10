@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -88,20 +87,20 @@ const Demo = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      {/* Demo Content - Updated to be properly centered */}
-      <section className="pt-28 pb-20 flex-grow bg-gradient-to-br from-indigo-50 via-purple-50 to-indigo-50 flex items-center justify-center">
-        <div className="container mx-auto px-4 flex flex-col items-center">
-          <div className="text-center mb-12 max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold text-center">Try RetailBoost Demo</h1>
-            <p className="mt-4 text-xl text-gray-600 text-center">
+      {/* Demo Content */}
+      <section className="pt-28 pb-20 flex-grow bg-gradient-to-br from-indigo-50 via-purple-50 to-indigo-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold">Try RetailBoost Demo</h1>
+            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the customer side of RetailBoost and see how our scratch card system works.
             </p>
           </div>
           
-          <div className="max-w-xl w-full">
+          <div className="max-w-xl mx-auto">
             {/* Step 1: Form */}
             {step === 1 && (
-              <div className="bg-white rounded-lg p-8 shadow-lg mx-auto">
+              <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="mb-6 flex justify-center">
                   <div className="h-24 w-24 rounded-full bg-brand-purple/10 flex items-center justify-center">
                     <QrCode className="h-12 w-12 text-brand-purple" />
@@ -149,7 +148,7 @@ const Demo = () => {
             
             {/* Step 2: Scratch Card */}
             {step === 2 && (
-              <div className="text-center flex flex-col items-center">
+              <div className="text-center">
                 <p className="text-lg mb-4">Tap/click on the card to scratch and reveal your discount</p>
                 <ScratchCard discount={discount} onReveal={handleScratchReveal} />
               </div>
@@ -157,7 +156,7 @@ const Demo = () => {
             
             {/* Step 3: Spin Wheel (for repeat customers) */}
             {step === 3 && (
-              <div className="text-center flex flex-col items-center">
+              <div className="text-center">
                 <p className="text-xl font-semibold mb-2">You're a repeat customer!</p>
                 <p className="text-lg mb-6">Spin the wheel for an extra discount</p>
                 <SpinWheel onSpinComplete={handleSpinComplete} />
@@ -166,7 +165,7 @@ const Demo = () => {
             
             {/* Step 4: Final Summary */}
             {step === 4 && (
-              <div className="bg-white rounded-lg p-8 shadow-lg text-center mx-auto">
+              <div className="bg-white rounded-lg p-8 shadow-lg text-center">
                 <h2 className="text-2xl font-bold mb-2">Congratulations, {name}!</h2>
                 <p className="text-lg mb-6">
                   You got a discount of <span className="text-brand-purple font-bold">₹{totalDiscount.toFixed(2)}</span>
