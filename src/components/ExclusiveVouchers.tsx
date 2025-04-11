@@ -173,7 +173,8 @@ const ExclusiveVouchers = () => {
       </div>
       
       {/* Add keyframes for coin animation */}
-      <style jsx>{`
+      <style>
+        {`
         @keyframes coin-float {
           0% {
             transform: translateY(0) scale(1);
@@ -184,7 +185,8 @@ const ExclusiveVouchers = () => {
             opacity: 0;
           }
         }
-      `}</style>
+        `}
+      </style>
     </section>
   );
 };
