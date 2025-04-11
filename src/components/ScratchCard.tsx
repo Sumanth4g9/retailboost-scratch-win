@@ -45,7 +45,7 @@ const ScratchCard: React.FC<ScratchCardProps> = ({ discount, couponCode, onRevea
         // Show toast notification
         toast({
           title: "Congrats!",
-          description: `You got ${cardData.discount}% discount with coupon: ${cardData.couponCode}`,
+          description: `You got ₹${cardData.discount} discount with coupon: ${cardData.couponCode}`,
         });
       }, 1000);
     }
