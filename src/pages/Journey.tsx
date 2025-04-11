@@ -39,7 +39,7 @@ const Journey: React.FC = () => {
             </CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 space-y-2">
-                <li>100 steps = 1 coin</li>
+                <li>1000 steps = 1 coin</li>
                 <li>Reach milestones to earn bonus coins</li>
                 <li>Complete daily challenges for extra rewards</li>
                 <li>Walk faster to increase your coin multiplier</li>
@@ -53,6 +53,7 @@ const Journey: React.FC = () => {
             </CardHeader>
             <CardContent>
               <ul className="list-disc pl-5 space-y-2">
+                <li>1 Coin = ₹1 Rupee </li>
                 <li>50 coins - Small discount</li>
                 <li>100 coins - Medium discount</li>
                 <li>200 coins - Large discount</li>
