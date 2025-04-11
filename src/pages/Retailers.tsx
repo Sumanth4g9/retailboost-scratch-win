@@ -41,7 +41,7 @@ const Retailers = () => {
                 <div className="absolute -top-4 -left-4 w-72 h-72 bg-brand-purple/20 rounded-full filter blur-3xl opacity-70"></div>
                 <div className="absolute -bottom-8 -right-8 w-72 h-72 bg-brand-orange/20 rounded-full filter blur-3xl opacity-70"></div>
                 <img 
-                  src="/public/l.jpg" 
+                  src="2.jpg"
                   alt="RetailBoost Dashboard" 
                   className="relative z-10 rounded-lg shadow-xl w-full" 
                 />
