@@ -18,7 +18,7 @@ const RetailerDashboard = () => {
   const retailerId = "088b4aed-a232-49eb-90ed-d7f88b992f55";
   const stats = {
     totalSales: "₹24,350.00",
-    discountsGiven: "₹0.00",
+    noofcustomers: "2",
     transactions: 12
   };
 
@@ -54,8 +54,8 @@ const RetailerDashboard = () => {
                 <p className="text-2xl font-bold">{stats.totalSales}</p>
               </div>
               <div className="bg-green-50 rounded-lg p-4">
-                <h3 className="text-green-700 font-medium mb-2">Discounts Given</h3>
-                <p className="text-2xl font-bold">{stats.discountsGiven}</p>
+                <h3 className="text-green-700 font-medium mb-2">No of customers</h3>
+                <p className="text-2xl font-bold">{stats.noofcustomers}</p>
               </div>
               <div className="bg-purple-50 rounded-lg p-4">
                 <h3 className="text-purple-700 font-medium mb-2">Transactions</h3>
