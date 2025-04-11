@@ -9,16 +9,11 @@ interface VoucherItem {
 }
 
 const voucherData: VoucherItem[] = [
-  { id: '1', brand: 'Nykaa', logo: 'Nykaa.png', discount: '5%' },
-  { id: '2', brand: 'Myntra', logo: 'download.png', discount: '16%' },
+  { id: '1', brand: 'Husle', logo: 'Nykaa.png', discount: '5%' },
+  { id: '2', brand: 'Mehfil', logo: 'download.png', discount: '16%' },
   { id: '3', brand: 'PVR Cinemas', logo: 'PVR Cinemas.png', discount: '18%' },
-  { id: '4', brand: 'Amazon', logo: 'amazon.png', discount: '2%' },
-  { id: '5', brand: 'Uber', logo: 'uber.png', discount: '4%' },
-  { id: '6', brand: 'MakeMyTrip', logo: 'MakeMyTrip.png', discount: '5%' },
-  { id: '7', brand: 'Mamaearth', logo: 'Mamaearth.png', discount: '47%' },
-  { id: '8', brand: 'AJIO', logo: 'AJIO.png', discount: '6%' },
-  { id: '9', brand: 'boAt', logo: 'boAt.png', discount: '53%' },
-  { id: '10', brand: 'WOW Skin Science', logo: 'WOW Skin Science.png', discount: '83%' },
+  { id: '4', brand: 'Niloufer', logo: 'amazon.png', discount: '2%' },
+  { id: '5', brand: 'CMR shopping Mall', logo: 'uber.png', discount: '4%' },
 ];
 
 const ExclusiveVouchers = () => {
@@ -32,7 +27,7 @@ const ExclusiveVouchers = () => {
           {voucherData.map((voucher) => (
             <div key={voucher.id} className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-2">
-                <div className="w-full h-full rounded-full border border-pink-200 flex items-center justify-center overflow-hidden p-4">
+                <div className="w-full h-full  border border-pink-200 flex items-center justify-center overflow-hidden p-4">
                   <div className="w-3/4 h-3/4 relative flex items-center justify-center">
                     {/* Using a placeholder div with brand name since we're using the same image for all logos */}
                     <div className="text-center text-xs font-bold">
