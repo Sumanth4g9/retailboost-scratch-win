@@ -105,21 +105,25 @@ const Index = () => {
           </div>
         </div>
       </section>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-      <div >
-      <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Your Journey to the Store</CardTitle>
-            <CardDescription>
-              Watch your progress as you walk toward the store and collect coins along the way
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <WalkingAnimation />
-          </CardContent>
-        </Card>
-</div>
+      
+      {/* Journey to Store Section - Centered */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">Your Journey to the Store</h2>
+          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            Watch your progress as you walk toward the store and collect coins along the way
+          </p>
+          
+          <div className="max-w-3xl mx-auto">
+            <Card>
+              <CardContent className="pt-6">
+                <WalkingAnimation />
+              </CardContent>
+            </Card>
+          </div>
         </div>
+      </section>
+        
         {/* Benefits Section */}
         <section className="py-16 bg-gray-50 ">
           <div className="container mx-auto px-4 flex justify-center items-center">
@@ -141,49 +145,12 @@ const Index = () => {
                   ))}
                 </ul>
               </div>
-              {/* <div>
-                <h2 className="text-3xl font-bold mb-8">Benefits to Businesses</h2>
-                <ul className="space-y-4">
-                  {[
-                    "Increase customer retention and loyalty",
-                    "Track customer visits and spending",
-                    "Customize discount rules and offers",
-                    "Stand out from competitors",
-                    "Affordable alternative to loyalty apps",
-                  ].map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <div className="h-6 w-6 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center mr-3 mt-1">✓</div>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div> */}
             </div>
           </div>
         </section>
         {/* exclusive vouchers */}
         <ExclusiveVouchers />
-        {/* CTA Section */}
-        {/* <section className="py-16">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Boost Your Business?</h2>
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-              Join RetailBoost today and start rewarding your customers with a fun and engaging discount system.
-            </p>
-            <div className="flex justify-center gap-4">
-              <Link to="/retailers">
-                <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90">
-                  Join as a Retailer
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline">
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section> */}
+
         <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -196,7 +163,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
-                quote: "I used to shop at my local store every day, but now with RetailBoost, I’ve saved over ₹1,200 just through scratch cards and spin wins! It makes shopping fun and rewarding.",
+                quote: "I used to shop at my local store every day, but now with RetailBoost, I've saved over ₹1,200 just through scratch cards and spin wins! It makes shopping fun and rewarding.",
                 name: "Anjali R.",
                 business: "",
                 rating: 5
@@ -208,13 +175,13 @@ const Index = () => {
                 rating: 5
               },
               { 
-                quote: "With three kids at home, every rupee matters. RetailBoost gave me instant discounts and even cashback-like rewards. I’ve saved nearly ₹950 in just two months",
+                quote: "With three kids at home, every rupee matters. RetailBoost gave me instant discounts and even cashback-like rewards. I've saved nearly ₹950 in just two months",
                 name: "Kavitha D.",
                 business: "Homemaker",
                 rating: 4
               },
               {
-                quote: "I love spinning the wheel after shopping—it’s like a mini game! I once got 15% off on a ₹500 bill. That feeling? Priceless!",
+                quote: "I love spinning the wheel after shopping—it's like a mini game! I once got 15% off on a ₹500 bill. That feeling? Priceless!",
                 name: "Farhan S. ",
                 business: "College Student",
                 rating: 5

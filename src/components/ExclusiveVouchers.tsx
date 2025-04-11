@@ -3,27 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Home, Store, Utensils, Film, Car } from 'lucide-react';
 
-interface VoucherItem {
-  id: string;
-  brand: string;
-  logo: string;
-  discount: string;
-}
-
 interface Location {
   id: number;
   name: string;
   icon: React.ReactNode;
   position: number;
 }
-
-const voucherData: VoucherItem[] = [
-  { id: '1', brand: 'Husle', logo: 'Nykaa.png', discount: '5%' },
-  { id: '2', brand: 'Mehfil', logo: 'download.png', discount: '16%' },
-  { id: '3', brand: 'PVR Cinemas', logo: 'PVR Cinemas.png', discount: '18%' },
-  { id: '4', brand: 'Niloufer', logo: 'amazon.png', discount: '2%' },
-  { id: '5', brand: 'CMR shopping Mall', logo: 'uber.png', discount: '4%' },
-];
 
 const locations: Location[] = [
   { id: 1, name: 'Home', icon: <Home className="w-6 h-6" />, position: 0 },
@@ -86,10 +71,10 @@ const ExclusiveVouchers = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-gray-800 mb-12">Exclusive Vouchers </h2>
-        <h3>vochers can be redemed using coins</h3>
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">Earn Coins as You Shop</h2>
+        <p className="text-lg text-gray-600 mb-12">Walk to stores, collect coins, and redeem them for discounts.</p>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="max-w-4xl mx-auto">
           {/* Walking Animation */}
           <div className="relative h-32 mb-10 border-b-2 border-dashed border-gray-300">
             {/* Path with locations */}
@@ -144,26 +129,37 @@ const ExclusiveVouchers = () => {
             </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {voucherData.map((voucher) => (
-              <div key={voucher.id} className="flex flex-col items-center">
-                <div className="relative w-full aspect-square mb-2">
-                  <div className="w-full h-full border border-pink-200 flex items-center justify-center overflow-hidden p-4">
-                    <div className="w-3/4 h-3/4 relative flex items-center justify-center">
-                      {/* Using a placeholder div with brand name since we're using the same image for all logos */}
-                      <div className="text-center text-xs font-bold">
-                        {voucher.brand}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/4">
-                    <Badge className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-3 py-1 text-xs whitespace-nowrap">
-                      Save {voucher.discount}
-                    </Badge>
-                  </div>
-                </div>
+          {/* Information Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="bg-purple-50 p-6 rounded-lg text-center">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏃</span>
               </div>
-            ))}
+              <h3 className="text-lg font-semibold mb-2">Track Steps</h3>
+              <p className="text-sm text-gray-600">Every 100 steps earns you 1 coin. Walk more to earn more!</p>
+            </div>
+            
+            <div className="bg-blue-50 p-6 rounded-lg text-center">
+              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">💰</span>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Collect Coins</h3>
+              <p className="text-sm text-gray-600">Gather coins at each destination. Special locations offer bonus coins!</p>
+            </div>
+            
+            <div className="bg-green-50 p-6 rounded-lg text-center">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛍️</span>
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Redeem Rewards</h3>
+              <p className="text-sm text-gray-600">Use your coins for exclusive discounts at participating stores.</p>
+            </div>
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Badge className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-4 py-2">
+              Coming Soon: Exclusive Vouchers Marketplace
+            </Badge>
           </div>
         </div>
       </div>

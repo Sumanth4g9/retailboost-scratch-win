@@ -17,24 +17,24 @@ const RetailerDashboard = () => {
   // Mock data for the dashboard
   const retailerId = "088b4aed-a232-49eb-90ed-d7f88b992f55";
   const stats = {
-    totalSales: "$0.00",
-    discountsGiven: "$0.00",
-    transactions: 0
+    totalSales: "₹24,350.00",
+    discountsGiven: "₹0.00",
+    transactions: 12
   };
 
   const transactions = [
-    { id: 1, user: "asura", amount: "$1000.00", discount: "$100.00", finalAmount: "$900.00", date: "11/04/2025", status: "completed" },
-    { id: 2, user: "asura", amount: "$100.00", discount: "$10.00", finalAmount: "$90.00", date: "10/04/2025", status: "completed" },
-    { id: 3, user: "asura", amount: "$99.00", discount: "$9.90", finalAmount: "$89.10", date: "09/04/2025", status: "completed" },
-    { id: 4, user: "asura", amount: "$150.00", discount: "$15.00", finalAmount: "$135.00", date: "09/04/2025", status: "completed" },
-    { id: 5, user: "name", amount: "$100.00", discount: "$10.00", finalAmount: "$90.00", date: "08/04/2025", status: "completed" },
-    { id: 6, user: "name", amount: "$100.00", discount: "$10.00", finalAmount: "$90.00", date: "08/04/2025", status: "completed" },
-    { id: 7, user: "name", amount: "$100.00", discount: "$10.00", finalAmount: "$90.00", date: "08/04/2025", status: "completed" },
-    { id: 8, user: "name", amount: "$100.00", discount: "$10.00", finalAmount: "$90.00", date: "08/04/2025", status: "completed" },
-    { id: 9, user: "asura", amount: "$100.00", discount: "$10.00", finalAmount: "$90.00", date: "07/04/2025", status: "completed" },
-    { id: 10, user: "asura", amount: "$500.00", discount: "$50.00", finalAmount: "$450.00", date: "07/04/2025", status: "completed" },
-    { id: 11, user: "asura", amount: "$100.00", discount: "$10.00", finalAmount: "$90.00", date: "07/04/2025", status: "completed" },
-    { id: 12, user: "name", amount: "$100.00", discount: "$10.00", finalAmount: "$90.00", date: "12/04/2025", status: "completed" },
+    { id: 1, user: "asura", amount: "₹1000.00", finalAmount: "₹900.00", date: "11/04/2025", status: "completed" },
+    { id: 2, user: "asura", amount: "₹100.00", finalAmount: "₹90.00", date: "10/04/2025", status: "completed" },
+    { id: 3, user: "asura", amount: "₹99.00", finalAmount: "₹89.10", date: "09/04/2025", status: "completed" },
+    { id: 4, user: "asura", amount: "₹150.00", finalAmount: "₹135.00", date: "09/04/2025", status: "completed" },
+    { id: 5, user: "name", amount: "₹100.00", finalAmount: "₹90.00", date: "08/04/2025", status: "completed" },
+    { id: 6, user: "name", amount: "₹100.00", finalAmount: "₹90.00", date: "08/04/2025", status: "completed" },
+    { id: 7, user: "name", amount: "₹100.00", finalAmount: "₹90.00", date: "08/04/2025", status: "completed" },
+    { id: 8, user: "name", amount: "₹100.00", finalAmount: "₹90.00", date: "08/04/2025", status: "completed" },
+    { id: 9, user: "asura", amount: "₹100.00", finalAmount: "₹90.00", date: "07/04/2025", status: "completed" },
+    { id: 10, user: "asura", amount: "₹500.00", finalAmount: "₹450.00", date: "07/04/2025", status: "completed" },
+    { id: 11, user: "asura", amount: "₹100.00", finalAmount: "₹90.00", date: "07/04/2025", status: "completed" },
+    { id: 12, user: "name", amount: "₹100.00", finalAmount: "₹90.00", date: "12/04/2025", status: "completed" },
   ];
 
   return (
@@ -95,7 +95,6 @@ const RetailerDashboard = () => {
                     <TableRow>
                       <TableHead>User</TableHead>
                       <TableHead>Amount</TableHead>
-                      <TableHead>Discount</TableHead>
                       <TableHead>Final Amount</TableHead>
                       <TableHead>Date</TableHead>
                       <TableHead>Status</TableHead>
@@ -106,7 +105,6 @@ const RetailerDashboard = () => {
                       <TableRow key={tx.id}>
                         <TableCell>{tx.user}</TableCell>
                         <TableCell>{tx.amount}</TableCell>
-                        <TableCell>{tx.discount}</TableCell>
                         <TableCell>{tx.finalAmount}</TableCell>
                         <TableCell>{tx.date}</TableCell>
                         <TableCell>
