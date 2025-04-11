@@ -6,7 +6,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ExclusiveVouchers from '@/components/ExclusiveVouchers';
 import {Star } from 'lucide-react';
-
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import WalkingAnimation from '@/components/WalkingAnimation';
 
 const Index = () => {
   return (
@@ -40,7 +41,7 @@ const Index = () => {
               </div>
               <div className="md:w-1/2 flex justify-center">
                 <img 
-                  src="/placeholder.svg" 
+                  src="/retail.jpg" 
                   alt="RetailBoost Illustration" 
                   className="max-w-full h-auto rounded-lg shadow-lg"
                   width={500}
@@ -104,7 +105,21 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+      <div >
+      <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Your Journey to the Store</CardTitle>
+            <CardDescription>
+              Watch your progress as you walk toward the store and collect coins along the way
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <WalkingAnimation />
+          </CardContent>
+        </Card>
+</div>
+        </div>
         {/* Benefits Section */}
         <section className="py-16 bg-gray-50 ">
           <div className="container mx-auto px-4 flex justify-center items-center">

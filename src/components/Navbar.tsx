@@ -39,10 +39,10 @@ const Navbar = () => {
             About
           </Link>
           <Link to="/contact" className="text-gray-700 hover:text-brand-purple transition-colors">
-            Contact
+          SignUp
           </Link>
           <Button onClick ={handleClick}className="bg-brand-purple hover:bg-brand-purple/90 text-white">
-            Points : {coins}</Button>
+            Coins : {coins}</Button>
           {/* <CoinIcon coins={5} /> Example coin count */}
         </div>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
             About
           </Link>
           <Link to="/contact" onClick={toggleMobileMenu} className="text-gray-700 hover:text-brand-purple transition-colors py-2">
-            Contact
+            SignUp
           </Link>
           <Button className="bg-brand-purple hover:bg-brand-purple/90 w-full">
             Get Started
