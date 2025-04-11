@@ -50,7 +50,7 @@ const SpinWheel: React.FC<SpinWheelProps> = ({ onSpinComplete }) => {
               key={index}
               className="absolute bottom-1/2 left-1/2 text-white font-bold text-sm"
               style={{
-                transform: `rotate(${index * 45}deg) translateY(-120px) rotate(-${index * 45}deg)`,
+                transform: `rotate(${index * 45}deg) translateY(-100px) rotate(-${index * 45}deg)`,
                 transformOrigin: 'bottom center',
                 }}
               >
