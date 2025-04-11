@@ -44,8 +44,7 @@ const Navbar = () => {
             SignUp
           </Link>
           
-          {/* QR Scanner Button */}
-          <QRScanner />
+
           
           <Button onClick={handleClick} className="bg-brand-purple hover:bg-brand-purple/90 text-white">
             Coins : {coins}
