@@ -244,8 +244,6 @@ const Index = () => {
       </main>
       
       <Footer />
-      {/* QR Scanner Button */}
-      <QRScanner />
     </div>
   );
 };

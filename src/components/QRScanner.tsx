@@ -31,8 +31,7 @@ const QRScanner = () => {
     <>
       <Button 
         onClick={() => setIsOpen(true)} 
-        variant="secondary"
-        size="icon"
+        variant="outline" 
         className="flex items-center gap-2 bg-white"
       >
         <QrCode className="w-5 h-5" />
