@@ -107,7 +107,7 @@ const Index = () => {
       </section>
       
       {/* Journey to Store Section - Centered */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Your Journey to the Store</h2>
           <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -122,7 +122,7 @@ const Index = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
         
         {/* Benefits Section */}
         <section className="py-16 bg-gray-50 ">

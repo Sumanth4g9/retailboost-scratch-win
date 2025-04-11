@@ -59,6 +59,9 @@ const BillingForm = () => {
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <div className="space-y-2">
+               <div className="pt-2">
+                  <p className="text-sm font-medium text-gray-700">Retailer ID: {retailerId}</p>
+                </div>
                 <FormField
                   control={form.control}
                   name="billAmount"
@@ -77,9 +80,7 @@ const BillingForm = () => {
                   )}
                 />
                 
-                <div className="pt-2">
-                  <p className="text-sm font-medium text-gray-700">Retailer ID: {retailerId}</p>
-                </div>
+
               </div>
               
               <Button 

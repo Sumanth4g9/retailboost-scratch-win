@@ -157,9 +157,6 @@ const ExclusiveVouchers = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <Badge className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-4 py-2">
-              Coming Soon: Exclusive Vouchers Marketplace
-            </Badge>
           </div>
         </div>
       </div>
