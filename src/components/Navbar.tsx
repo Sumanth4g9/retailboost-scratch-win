@@ -43,6 +43,9 @@ const Navbar = () => {
           <Link to="/contact" className="text-gray-700 hover:text-brand-purple transition-colors">
             SignUp
           </Link>
+          
+
+          
           <Button onClick={handleClick} className="bg-brand-purple hover:bg-brand-purple/90 text-white">
             Coins : {coins}
           </Button>

@@ -8,7 +8,7 @@ import ExclusiveVouchers from '@/components/ExclusiveVouchers';
 import {Star } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import WalkingAnimation from '@/components/WalkingAnimation';
-import QRScanner from '@/components/QRScanner';
+
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
