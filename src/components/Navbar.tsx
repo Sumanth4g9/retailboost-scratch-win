@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import CoinIcon from './CoinIcon';
 import { useNavigate } from 'react-router-dom';
+import QRScanner from './QRScanner';
+
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const coins= 5; // Example coin count, replace with actual state or prop
@@ -25,7 +27,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-4">
           <Link to="/" className="text-gray-700 hover:text-brand-purple transition-colors">
             Home
           </Link>
@@ -39,11 +41,15 @@ const Navbar = () => {
             About
           </Link>
           <Link to="/contact" className="text-gray-700 hover:text-brand-purple transition-colors">
-          SignUp
+            SignUp
           </Link>
-          <Button onClick ={handleClick}className="bg-brand-purple hover:bg-brand-purple/90 text-white">
-            Coins : {coins}</Button>
-          {/* <CoinIcon coins={5} /> Example coin count */}
+          
+          {/* QR Scanner Button */}
+          <QRScanner />
+          
+          <Button onClick={handleClick} className="bg-brand-purple hover:bg-brand-purple/90 text-white">
+            Coins : {coins}
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -72,8 +78,14 @@ const Navbar = () => {
           <Link to="/contact" onClick={toggleMobileMenu} className="text-gray-700 hover:text-brand-purple transition-colors py-2">
             SignUp
           </Link>
-          <Button className="bg-brand-purple hover:bg-brand-purple/90 w-full">
-            Get Started
+          
+          {/* QR Scanner for mobile */}
+          <div className="py-2">
+            <QRScanner />
+          </div>
+          
+          <Button onClick={handleClick} className="bg-brand-purple hover:bg-brand-purple/90 w-full">
+            Coins: {coins}
           </Button>
         </div>
       )}

@@ -11,6 +11,8 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Journey from "./pages/Journey";
 import NotFound from "./pages/NotFound";
+import BillingFormPage from "./pages/BillingFormPage";
+import ScratchCardPage from "./pages/ScratchCardPage";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/journey" element={<Journey />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/billing-form/:retailerId" element={<BillingFormPage />} />
+          <Route path="/scratch-card" element={<ScratchCardPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
