@@ -91,7 +91,8 @@ const Demo = () => {
       <section className="pt-28 pb-20 flex-grow bg-gradient-to-br from-indigo-50 via-purple-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold">Try RetailBoost Demo</h1>
+            <h1 className="text-4xl font-bold">Welcome to RetailBoost</h1>
+            
             <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
               Experience the customer side of RetailBoost and see how our scratch card system works.
             </p>
@@ -149,7 +150,8 @@ const Demo = () => {
             {/* Step 2: Scratch Card */}
             {step === 2 && (
               <div className="text-center">
-                <p className="text-lg mb-4">Tap/click on the card to scratch and reveal your discount</p>
+                <p className="text-lg mb-4">Try your Luck -- Scratch to Win</p>
+                <p className="text-lg mb-4">Reveal Your Discount</p>
                 <ScratchCard discount={discount} onReveal={handleScratchReveal} />
               </div>
             )}

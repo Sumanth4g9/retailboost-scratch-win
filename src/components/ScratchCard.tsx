@@ -26,7 +26,8 @@ const ScratchCard: React.FC<ScratchCardProps> = ({ discount, onReveal }) => {
     >
       <div className="relative w-full h-full flex items-center justify-center">
         <div className="text-center z-0 px-6">
-          <div className="mb-4 text-5xl font-bold text-brand-purple">₹{discount}</div>
+          <div className="mb-4 text-5xl font-bold text-brand-purple">Congratulations</div>
+          <div className="mb-4 text-5xl font-bold text-brand-purple">{discount}%</div>
           <div className="text-2xl text-gray-700">Discount</div>
         </div>
         

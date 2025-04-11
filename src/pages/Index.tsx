@@ -5,6 +5,9 @@ import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ExclusiveVouchers from '@/components/ExclusiveVouchers';
+import {Star } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import WalkingAnimation from '@/components/WalkingAnimation';
 
 const Index = () => {
   return (
@@ -38,7 +41,7 @@ const Index = () => {
               </div>
               <div className="md:w-1/2 flex justify-center">
                 <img 
-                  src="/placeholder.svg" 
+                  src="/retail.jpg" 
                   alt="RetailBoost Illustration" 
                   className="max-w-full h-auto rounded-lg shadow-lg"
                   width={500}
@@ -72,14 +75,55 @@ const Index = () => {
             </div>
           </div>
         </section>
-        
-        {/* Exclusive Vouchers Section */}
-        <ExclusiveVouchers />
-        
+              {/* Use Cases Section */}
+        <section className="py-20 bg-white">
+
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold"> OUR REACH  </h2>
+            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+              RetailBoost works for a variety of local businesses.
+            </p>
+          </div>
+          
+          <div className="pl-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {[
+              { image: "2.jpg", title: "Grocery Shops" },
+              { image: "1.webp", title: "Food Stalls" },
+              { image: "3.jpg", title: "Restaurants" },
+              { image: "4.jpg", title: "Vegetable Vendors" },
+              { image: "5.jpg", title: "Clothing Stores" }
+
+            ].map((useCase, index) => (
+              <div key={index} className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <img src={useCase.image} alt={useCase.title} className="w-full h-48 object-cover" />
+                <div className="p-4 bg-gray-50">
+                  <h3 className="text-lg font-semibold text-center">{useCase.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+      <div >
+      <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Your Journey to the Store</CardTitle>
+            <CardDescription>
+              Watch your progress as you walk toward the store and collect coins along the way
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <WalkingAnimation />
+          </CardContent>
+        </Card>
+</div>
+        </div>
         {/* Benefits Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <section className="py-16 bg-gray-50 ">
+          <div className="container mx-auto px-4 flex justify-center items-center">
+            <div className="text-center mb-12">
               <div>
                 <h2 className="text-3xl font-bold mb-8">Benefits to Customers</h2>
                 <ul className="space-y-4">
@@ -97,7 +141,7 @@ const Index = () => {
                   ))}
                 </ul>
               </div>
-              <div>
+              {/* <div>
                 <h2 className="text-3xl font-bold mb-8">Benefits to Businesses</h2>
                 <ul className="space-y-4">
                   {[
@@ -113,13 +157,14 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
-        
+        {/* exclusive vouchers */}
+        <ExclusiveVouchers />
         {/* CTA Section */}
-        <section className="py-16">
+        {/* <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Boost Your Business?</h2>
             <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
@@ -138,7 +183,64 @@ const Index = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </section> */}
+        <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold">What Retailers Say</h2>
+            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+              Hear from some of the businesses using RetailBoost to drive customer loyalty.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { 
+                quote: "I used to shop at my local store every day, but now with RetailBoost, I’ve saved over ₹1,200 just through scratch cards and spin wins! It makes shopping fun and rewarding.",
+                name: "Anjali R.",
+                business: "",
+                rating: 5
+              },
+              { 
+                quote: "I walk 1.5 km daily to my grocery store, and RetailBoost tracked my steps. I collected RB Coins and used them for discount vouchers. Never thought walking could save me money!",
+                name: "Mahesh G.",
+                business: "Fitness Enthusiast",
+                rating: 5
+              },
+              { 
+                quote: "With three kids at home, every rupee matters. RetailBoost gave me instant discounts and even cashback-like rewards. I’ve saved nearly ₹950 in just two months",
+                name: "Kavitha D.",
+                business: "Homemaker",
+                rating: 4
+              },
+              {
+                quote: "I love spinning the wheel after shopping—it’s like a mini game! I once got 15% off on a ₹500 bill. That feeling? Priceless!",
+                name: "Farhan S. ",
+                business: "College Student",
+                rating: 5
+
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="h-5 w-5 text-brand-orange fill-brand-orange" />
+                  ))}
+                  {[...Array(5 - testimonial.rating)].map((_, i) => (
+                    <Star key={i + testimonial.rating} className="h-5 w-5 text-gray-300" />
+                  ))}
+                </div>
+                <p className="text-gray-600 italic mb-6">"{testimonial.quote}"</p>
+                <div className=''>
+                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="text-sm text-gray-500">{testimonial.business}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
       </main>
       
       <Footer />
