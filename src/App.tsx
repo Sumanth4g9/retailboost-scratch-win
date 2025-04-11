@@ -13,6 +13,8 @@ import Journey from "./pages/Journey";
 import NotFound from "./pages/NotFound";
 import BillingFormPage from "./pages/BillingFormPage";
 import ScratchCardPage from "./pages/ScratchCardPage";
+import RetailerDashboard from "./pages/RetailerDashboard";
+import QRScanner from "./components/QRScanner";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/retailers" element={<Retailers />} />
+          <Route path="/retailer-dashboard" element={<RetailerDashboard />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/about" element={<About />} />
@@ -34,6 +37,9 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        
+        {/* Floating QR Scanner Button */}
+        <QRScanner isFloating={true} />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import CoinIcon from './CoinIcon';
 import { useNavigate } from 'react-router-dom';
-import QRScanner from './QRScanner';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,9 +43,6 @@ const Navbar = () => {
             SignUp
           </Link>
           
-          {/* QR Scanner Button */}
-          <QRScanner />
-          
           <Button onClick={handleClick} className="bg-brand-purple hover:bg-brand-purple/90 text-white">
             Coins : {coins}
           </Button>
@@ -78,11 +74,6 @@ const Navbar = () => {
           <Link to="/contact" onClick={toggleMobileMenu} className="text-gray-700 hover:text-brand-purple transition-colors py-2">
             SignUp
           </Link>
-          
-          {/* QR Scanner for mobile */}
-          <div className="py-2">
-            <QRScanner />
-          </div>
           
           <Button onClick={handleClick} className="bg-brand-purple hover:bg-brand-purple/90 w-full">
             Coins: {coins}

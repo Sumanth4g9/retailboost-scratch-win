@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle, BarChart4, Users, Settings, Database, QrCode } from 'lucide-react';
+import { ArrowRight, CheckCircle, BarChart4, Users, Settings, Database, QrCode, LayoutDashboard } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -22,11 +21,17 @@ const Retailers = () => {
               <p className="mt-6 text-xl text-gray-600">
                 In the age of quick commerce, RetailBoost helps local businesses compete with digital rewards that keep customers coming back.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
                   <Button className="bg-brand-purple hover:bg-brand-purple/90 text-white text-lg py-6 px-8">
                     Contact for Demo
                     <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link to="/retailer-dashboard">
+                  <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white text-lg py-6 px-8">
+                    View Dashboard
+                    <LayoutDashboard className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
               </div>
@@ -158,35 +163,6 @@ const Retailers = () => {
         </div>
       </section>
       
-      {/* Use Cases Section */}
-      {/* <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">Use Cases</h2>
-            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-              RetailBoost works for a variety of local businesses.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {[
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Grocery", title: "Grocery Shops" },
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Food", title: "Food Stalls" },
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Restaurant", title: "Restaurants" },
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Vegetable", title: "Vegetable Vendors" },
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Kirana", title: "Local Kirana Stores" }
-            ].map((useCase, index) => (
-              <div key={index} className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <img src={useCase.image} alt={useCase.title} className="w-full h-48 object-cover" />
-                <div className="p-4 bg-gray-50">
-                  <h3 className="text-lg font-semibold text-center">{useCase.title}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-      
       {/* Pricing Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -299,9 +275,10 @@ const Retailers = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Link to="/demo">
+            <Link to="/retailer-dashboard">
               <Button variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white/10 text-lg py-6 px-8">
-                Try the Demo
+                View Dashboard
+                <LayoutDashboard className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>
