@@ -3,13 +3,19 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-
+import CoinIcon from './CoinIcon';
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const coins= 5; // Example coin count, replace with actual state or prop
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/Journey');
+  }
 
   return (
     <nav className="w-full bg-white shadow-sm py-4 fixed top-0 left-0 z-50">
@@ -35,9 +41,9 @@ const Navbar = () => {
           <Link to="/contact" className="text-gray-700 hover:text-brand-purple transition-colors">
             Contact
           </Link>
-          <Button className="bg-brand-purple hover:bg-brand-purple/90">
-            Get Started
-          </Button>
+          <Button onClick ={handleClick}className="bg-brand-purple hover:bg-brand-purple/90 text-white">
+            Points : {coins}</Button>
+          {/* <CoinIcon coins={5} /> Example coin count */}
         </div>
 
         {/* Mobile Menu Button */}

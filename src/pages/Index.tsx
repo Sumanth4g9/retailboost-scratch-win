@@ -5,8 +5,8 @@ import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ExclusiveVouchers from '@/components/ExclusiveVouchers';
+import {Star } from 'lucide-react';
 
-import { Star } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -74,7 +74,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
               {/* Use Cases Section */}
         <section className="py-20 bg-white">
 
@@ -86,13 +85,14 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="pl-30 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Grocery", title: "Grocery Shops" },
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Food", title: "Food Stalls" },
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Restaurant", title: "Restaurants" },
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Vegetable", title: "Vegetable Vendors" },
-              { image: "https://placehold.co/300x200/8B5CF6/FFFFFF?text=Kirana", title: "Local Kirana Stores" }
+              { image: "2.jpg", title: "Grocery Shops" },
+              { image: "1.webp", title: "Food Stalls" },
+              { image: "3.jpg", title: "Restaurants" },
+              { image: "4.jpg", title: "Vegetable Vendors" },
+              { image: "5.jpg", title: "Clothing Stores" }
+
             ].map((useCase, index) => (
               <div key={index} className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <img src={useCase.image} alt={useCase.title} className="w-full h-48 object-cover" />
@@ -104,13 +104,11 @@ const Index = () => {
           </div>
         </div>
       </section>
-        
-        {/* Exclusive Vouchers Section */}
-        <ExclusiveVouchers />
+      
         {/* Benefits Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <section className="py-16 bg-gray-50 ">
+          <div className="container mx-auto px-4 flex justify-center items-center">
+            <div className="text-center mb-12">
               <div>
                 <h2 className="text-3xl font-bold mb-8">Benefits to Customers</h2>
                 <ul className="space-y-4">
@@ -183,22 +181,29 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { 
-                quote: "RetailBoost has helped us increase repeat customers by 30% in just three months. Our customers love the scratch card experience!",
-                name: "Raj Kumar",
-                business: "Fresh Grocery Mart",
+                quote: "I used to shop at my local store every day, but now with RetailBoost, I’ve saved over ₹1,200 just through scratch cards and spin wins! It makes shopping fun and rewarding.",
+                name: "Anjali R.",
+                business: "",
                 rating: 5
               },
               { 
-                quote: "The system was easy to set up and our customers find it exciting. We're seeing more repeat visits and higher average spend.",
-                name: "Priya Sharma",
-                business: "Spice & Nice Restaurant",
+                quote: "I walk 1.5 km daily to my grocery store, and RetailBoost tracked my steps. I collected RB Coins and used them for discount vouchers. Never thought walking could save me money!",
+                name: "Mahesh G.",
+                business: "Fitness Enthusiast",
                 rating: 5
               },
               { 
-                quote: "Our customers are actually choosing us over the quick commerce apps because they enjoy the shopping experience and rewards.",
-                name: "Vikram Singh",
-                business: "Singh's Kirana Store",
+                quote: "With three kids at home, every rupee matters. RetailBoost gave me instant discounts and even cashback-like rewards. I’ve saved nearly ₹950 in just two months",
+                name: "Kavitha D.",
+                business: "Homemaker",
                 rating: 4
+              },
+              {
+                quote: "I love spinning the wheel after shopping—it’s like a mini game! I once got 15% off on a ₹500 bill. That feeling? Priceless!",
+                name: "Farhan S. ",
+                business: "College Student",
+                rating: 5
+
               }
             ].map((testimonial, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow">
@@ -211,7 +216,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 italic mb-6">"{testimonial.quote}"</p>
-                <div>
+                <div className=''>
                   <p className="font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.business}</p>
                 </div>

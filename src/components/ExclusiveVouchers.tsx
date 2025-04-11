@@ -9,18 +9,16 @@ interface VoucherItem {
 }
 
 const voucherData: VoucherItem[] = [
-  { id: '1', brand: 'Nykaa', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '5%' },
-  { id: '2', brand: 'Myntra', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '16%' },
-  { id: '3', brand: 'PVR Cinemas', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '18%' },
-  { id: '4', brand: 'Amazon', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '2%' },
-  { id: '5', brand: 'Uber', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '4%' },
-  { id: '6', brand: 'MakeMyTrip', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '5%' },
-  { id: '7', brand: 'Mamaearth', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '47%' },
-  { id: '8', brand: 'AJIO', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '6%' },
-  { id: '9', brand: 'boAt', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '53%' },
-  { id: '10', brand: 'WOW Skin Science', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '83%' },
-  { id: '11', brand: 'Bombay Shaving Company', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '67%' },
-  { id: '12', brand: 'Libas', logo: '/lovable-uploads/a1fa3b3f-e513-49a9-8c7f-01904c2558e8.png', discount: '38%' },
+  { id: '1', brand: 'Nykaa', logo: 'Nykaa.png', discount: '5%' },
+  { id: '2', brand: 'Myntra', logo: 'download.png', discount: '16%' },
+  { id: '3', brand: 'PVR Cinemas', logo: 'PVR Cinemas.png', discount: '18%' },
+  { id: '4', brand: 'Amazon', logo: 'amazon.png', discount: '2%' },
+  { id: '5', brand: 'Uber', logo: 'uber.png', discount: '4%' },
+  { id: '6', brand: 'MakeMyTrip', logo: 'MakeMyTrip.png', discount: '5%' },
+  { id: '7', brand: 'Mamaearth', logo: 'Mamaearth.png', discount: '47%' },
+  { id: '8', brand: 'AJIO', logo: 'AJIO.png', discount: '6%' },
+  { id: '9', brand: 'boAt', logo: 'boAt.png', discount: '53%' },
+  { id: '10', brand: 'WOW Skin Science', logo: 'WOW Skin Science.png', discount: '83%' },
 ];
 
 const ExclusiveVouchers = () => {
@@ -30,7 +28,7 @@ const ExclusiveVouchers = () => {
         <h2 className="text-3xl font-bold text-gray-800 mb-12">Exclusive Vouchers </h2>
         <h3>vochers can be redemed using coins</h3>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {voucherData.map((voucher) => (
             <div key={voucher.id} className="flex flex-col items-center">
               <div className="relative w-full aspect-square mb-2">
